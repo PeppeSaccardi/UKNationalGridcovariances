@@ -1,12 +1,6 @@
 library(shiny)
 library(shinythemes)
-# Ciao
 source("plot_results.R")
-
-
-
-
-
 # Define UI ----
 ui <- fluidPage(theme = shinytheme("lumen"),
   titlePanel("Results Analysis"),
