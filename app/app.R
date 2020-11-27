@@ -2,23 +2,7 @@ library(shiny)
 library(shinythemes)
 # Ciao
 source("plot_results.R")
-load("neiMat.RData")
-load("emp_cov.RData")
-# GLOBAL VARIABLES USED BY THE PLOT FUNCTION
-source("neiIdx.R")
-nei_indeces <- neiIdx(neiMat)
-neig <- colnames(neiMat)
-hours <- NULL
-for(i in 0:23){
-  for(j in c("00","30")){
-    if(i < 10){
-      hours <- c(hours,paste0("0",i,":",j))
-    } else{
-      hours <- c(hours,paste0(i,":",j))
-    }
-  }
-}
-hours[c(2:11,13:17,19:23,25:32,34:42,44:47)] <- ""
+
 
 
 
