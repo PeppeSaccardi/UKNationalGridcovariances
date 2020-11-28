@@ -22,7 +22,7 @@ ui <- fluidPage(theme = shinytheme("lumen"),
       ),
       helpText("For further details on this topic, see also the ",
         tags$a(href = "https://github.com/PeppeSaccardi/acmvup", 
-               "acvmup", target = "_blank"),
+               "acmvup", target = "_blank"),
         "R package available on Github")
     ),
     mainPanel(
