@@ -19,7 +19,11 @@ ui <- fluidPage(theme = shinytheme("lumen"),
         
         sliderInput("c", h4("Select the neighborhood covariance of interest"),
                     min = 1, max = 39, value = 12)
-      )
+      ),
+      helpText("For further details on this topic, see also the ",
+        tags$a(href = "https://github.com/PeppeSaccardi/acmvup", 
+               "acvmup", target = "_blank"),
+        "R package available on Github")
     ),
     mainPanel(
       p("This is a simple application built in order to show the results coming 
