@@ -36,10 +36,10 @@ plot_results <- function(i_nup, c){
     lines(p_mean, type = "l", col = "red")
     lines(p_max, lty = 4 , col="green")
     lines(p_min, lty = 4, col="green")
-    title(main = paste0("Covariance between \n ",neig[i]," and \n",neig[j]),
+    title(main = paste0("Covariance between \n ",neig[i]," and ",neig[j]),
           sub = paste0("Using ",i_nup, " unconstrained parameters"))
     l <- c("Empirical covariance","MLE covariance","95% Conf Intervals")
-    legend('bottom', legend = l, cex = 0.6,  bty = "n"
+    legend('bottom', legend = l, cex = 0.75,  bty = "n"
            ,lty=c(1,1,2), col = c("blue","red","green"))
     axis(1, at = 1:48, labels = FALSE)
     text(1:48, par("usr")[3]- 0.02, labels = hours, cex = 0.7, srt=45, pos = 1, 
