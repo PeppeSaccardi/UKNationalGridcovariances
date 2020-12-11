@@ -17,7 +17,7 @@ ui <- fluidPage(theme = shinytheme("lumen"),
                                    "105 unconstrained parameters"=105), selected = 20),
         
         
-        sliderInput("c", h4("Select the neighborhood covariance of interest"),
+        sliderInput("c", h4("Select the neighborhing covariance of interest"),
                     min = 1, max = 39, value = 12)
       ),
       helpText("For further details on this topic, see also the ",
@@ -42,7 +42,7 @@ server <- function(input, output) {
     paste(paste0("You have selected ",input$i_nup," unconstrained parameters"))
   })
   output$selected_c <- renderText({ 
-    paste0("You have selected the ",input$c,"-th neighborhood covariance, that is, the covariance between ", 
+    paste0("You have selected the ",input$c,"-th neighborhing covariance, that is, the covariance between ", 
     neig[nei_indeces$ii[input$c]]," and ",neig[nei_indeces$jj[input$c]])
     
   })
